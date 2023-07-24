@@ -33,4 +33,4 @@ def crawl_trending_coin():
         trending_coin.append(coin_info)
     return trending_coin
 
-crawl_trending_coin()
+
