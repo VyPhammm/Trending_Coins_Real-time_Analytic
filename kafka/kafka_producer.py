@@ -12,12 +12,12 @@ def main_task():
     data = crawl_trending_coin()
     for row in data:
         producer.send(kafka_topic, value=row)
-    return print("Sending coin data to kafka Successfully")
+    return print("Sending data to kafka Successfully")
 
 
 status = "ON"
 while status == "ON":
     main_task()
-    time.sleep(2)
+    time.sleep(5)
 producer.close()    
 
